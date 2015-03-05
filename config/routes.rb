@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
-  root 'user'
-
+  root to:  'user#index'
   
   resources :user
   resources :booking
