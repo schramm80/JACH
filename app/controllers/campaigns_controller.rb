@@ -3,7 +3,12 @@ class CampaignsController < ApplicationController
 
   def index
     @campaigns = Campaign.all.to_json
-    render json: @campaigns
+    #puts request.path
+    if request.path == "/campaigns.json"
+      render json: @campaigns
+    else 
+      render 'index'
+    end
     
     #Maybe add json pretty rendering?
   end
