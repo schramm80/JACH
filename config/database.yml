@@ -22,8 +22,4 @@ development:
   encoding: unicode
   database: brandnew_dev
   pool: 5
-<<<<<<< HEAD:config/database.yml.template
-  username: hazel
-=======
-  username: Schramm
->>>>>>> c7235cb10cfdb6b4c27dabad8693d7dc6fdb98c6:config/database.yml
+  username: postgres
