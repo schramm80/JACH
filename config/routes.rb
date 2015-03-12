@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
-  root to:  'campaigns#index'
-  
+  root to:  'landing#home'
+  get "landings/home"
+
+  resources :landing
   resources :users
   resources :bookings
   resources :campaigns

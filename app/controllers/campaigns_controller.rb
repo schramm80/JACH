@@ -14,7 +14,10 @@ def show
  @campaign = Campaign.find(params[:id])
  render json: @campaign
 end
+def home
+  
 
+end
 
 def new
   @campaign = Campaign.new
