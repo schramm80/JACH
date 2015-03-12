@@ -1,2 +1,0 @@
-class SocialMediaProfileController < ApplicationController
-end
