@@ -15,12 +15,13 @@ class CampaignsController < ApplicationController
 
 
   def show
-    id = (params[:id])
-   @campaign = Campaign.find(id)
-   @bookings = Booking.where(campaign_id: id)
-   # to do URL logic
-   @res = {campaign: @campaign, bookings: @bookings}
-   render json: @res
+    @campaign = Campaign.find(params[:id])
+    @bookings = @campaign.bookings
+    
+    respond_to do |format|
+      format.html
+      format.json { render :json => @campaign.to_json }
+    end
  end
 
 
