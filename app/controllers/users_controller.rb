@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    @users = Users.all.to_json
+    @users = User.all.to_json
     render json: @users
     
     #Maybe add json pretty rendering?
