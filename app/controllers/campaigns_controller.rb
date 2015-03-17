@@ -2,13 +2,24 @@ class CampaignsController < ApplicationController
 
 
   def index
-    @campaigns = Campaign.all.to_json
+    @campaigns
+    if params[:status] 
+      @campaigns = Campaign.where(status: params[:status])
+    else
+      @campaigns = Campaign.all.to_json   
+    end
+    
+    
     #puts request.path
     if request.path == "/campaigns.json"
       render json: @campaigns
     else 
+      puts "index"
+	  @campaigns = Campaign.all
       render 'index'
     end
+    
+    
     
     #Maybe add json pretty rendering?
   end
@@ -17,11 +28,12 @@ class CampaignsController < ApplicationController
   def show
     @campaign = Campaign.find(params[:id])
     @bookings = @campaign.bookings
-    
-    respond_to do |format|
-      format.html
-      format.json { render :json => @campaign.to_json }
-    end
+    puts @bookings
+    puts @campaign
+  #  respond_to do |format|
+  #    format.html
+  #    format.json 
+  #  end
  end
 
 

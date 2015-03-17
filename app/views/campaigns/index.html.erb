@@ -1,3 +1,10 @@
-<%# <h1>Listing all campaigns!</h1> %>
-<%= @campaigns %>
+<h1>Listing all campaigns!</h1>
+
+<%= @arf %>
+
+
+<% @campaigns.each do |c|  %>
+<li><%= link_to c.name, campaign_path(c.id) %> <br /></li>
+
+<% end %>
 

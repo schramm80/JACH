@@ -1,4 +1,11 @@
 <h1>Choose what you want to do</h1>
 
-<%= link_to "Campaigns" , campaigns_path %><br>
-<%= link_to "Bookings" , bookings_path %>
+<%= link_to "Campaigns" , campaigns_path %> | 
+<%= link_to "Campaigns active" , campaigns_path+".json?status=active" %> | 
+<%= link_to "Campaigns archived" , campaigns_path+".json?status=archived" %> | 
+<%= link_to "Campaigns draft" , campaigns_path+".json?status=draft" %> | 
+<%= link_to "Campaigns finished" , campaigns_path+".json?status=finished" %> |
+
+<br>
+<%= link_to "Bookings" , bookings_path %> 
+
