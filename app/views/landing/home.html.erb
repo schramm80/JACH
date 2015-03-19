@@ -11,10 +11,20 @@
 <h1>Choose what you want to do</h1>
 
 <%= link_to "Campaigns" , campaigns_path %> | 
-<%= link_to "Campaigns active" , campaigns_path+".json?status=active" %> | 
-<%= link_to "Campaigns archived" , campaigns_path+".json?status=archived" %> | 
-<%= link_to "Campaigns draft" , campaigns_path+".json?status=draft" %> | 
-<%= link_to "Campaigns finished" , campaigns_path+".json?status=finished" %> |
+<%= link_to "Campaigns active" , campaign_status_path("active") %> | 
+<%= link_to "Campaigns archived" , campaign_status_path("archived") %> | 
+<%= link_to "Campaigns draft" , campaign_status_path("draft") %> | 
+<%= link_to "Campaigns finished" , campaign_status_path("finished") %> |
+
+
+<p><h2>JSON format</h2></p>
+
+
+<%= link_to "Campaigns" , campaigns_path %> | 
+<%= link_to "Campaigns active" , campaign_status_path("active.json") %> | 
+<%= link_to "Campaigns archived" , campaign_status_path("archived.json") %> | 
+<%= link_to "Campaigns draft" , campaign_status_path("draft.json") %> | 
+<%= link_to "Campaigns finished" , campaign_status_path("finished.json") %> |
 
 <br>
 <%= link_to "Bookings" , bookings_path %> 
