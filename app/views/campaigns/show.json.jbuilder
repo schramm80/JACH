@@ -1,10 +1,8 @@
-json.campaign @campaign do |c|
+json.campaign @campaigns do |c|
   json.id c.id
   json.comment c.budget
-  json.type c.type  
+  json.type c.campaign_type  
 end
-
-
 
 
 json.bookings @bookings do |b|
