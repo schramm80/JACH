@@ -20,7 +20,10 @@ class CampaignsController < ApplicationController
   def show
     @campaign = Campaign.find(params[:id])
     @bookings = @campaign.bookings
-    
+    respond_to do |format|
+      format.html 
+      format.json
+    end
   
  end
 
