@@ -2,38 +2,26 @@ class CampaignsController < ApplicationController
 
 
   def index
-    @campaigns
+   # @campaigns  #ask lukas
     if params[:status] 
       @campaigns = Campaign.where(status: params[:status])
     else
-      @campaigns = Campaign.all.to_json   
+      @campaigns = Campaign.all
     end
     
-    
-    #puts request.path
-    if request.path == "/campaigns.json"
-      render json: @campaigns
-    else 
-      puts "index"
-	  @campaigns = Campaign.all
-      render 'index'
+    respond_to do |format|
+      format.html 
+      format.json
     end
     
-    
-    
-    #Maybe add json pretty rendering?
   end
 
 
   def show
     @campaign = Campaign.find(params[:id])
     @bookings = @campaign.bookings
-    puts @bookings
-    puts @campaign
-  #  respond_to do |format|
-  #    format.html
-  #    format.json 
-  #  end
+    
+  
  end
 
 
