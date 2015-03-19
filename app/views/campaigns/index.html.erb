@@ -9,10 +9,10 @@
 					<span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-					    <li role="presentation"><%= link_to "All Campaigns" , campaigns_path ("campaigns"), role: "menuitem", tabindex: "-1" %></li>
+					    <li role="presentation"><%= link_to "All Campaigns" , campaigns_path("campaigns"), role: "menuitem", tabindex: "-1" %></li>
 					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Active</a></li>
 					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Finished</a></li>
-					    <li role="presentation"><%= link_to "Draft" , campaign_status_path("draft"), role: "menuitem", tabindex: "-1" %></li>
+					    <li role="presentation"><%= link_to "Drafts" , campaign_status_path("draft"), role: "menuitem", tabindex: "-1" %></li>
 					    <li role="presentation"><%= link_to "Archived" , campaign_status_path("archived"), role: "menuitem", tabindex: "-1" %></li>
 					 </ul>
 				</div>
