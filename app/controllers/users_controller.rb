@@ -3,13 +3,11 @@ class UsersController < ApplicationController
   def index
     @users = User.all.to_json
     
-    if request.path == "/users.json"
-      render json: @users
-    else 
-      render 'index'
+    respond_to do |format|
+      format.html 
+      format.json
     end
     
-    #Maybe add json pretty rendering?
   end
 
   def show
