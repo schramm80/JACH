@@ -1,10 +1,59 @@
-<h1>Listing all campaigns!</h1>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Brandnew Project</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+		<body>
+			<div class="container">
+				<header><img src="../assets/images/brandnew_logo.png"/></header>
+				<div class="content">
+					<h1>All Campaigns</h1>
 
-<%= @arf %>
+					<div class="dropdown">
+				  		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+				    Filter
+				    		<span class="caret"></span>
+				  		</button>
+				  		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List All</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Active</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Finished</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Draft</a></li>
+						    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Archived</a></li>
+				  		</ul>
+					</div>
+
+					<%= @arf %>
 
 
-<% @campaigns.each do |c|  %>
-<li><%= link_to c.name, campaign_path(c.id) %> <br /></li>
 
-<% end %>
+					<% @campaigns.each do |c|  %>
+						
+					<ul class="campaigns">
+						<li class="list-group-item"><%= link_to c.name, campaign_path(c.id) %> <br /></li>
+					</ul>
+						
+					<% end %>
+				</div>
+					<ul class="pagination">
+							    <li>
+							      <a href="#" aria-label="Previous">
+								        <span aria-hidden="true">&laquo;</span>
+								  </a>
+								</li>
+								    <li><a href="#">1</a></li>
+								    <li><a href="#">2</a></li>
+								    <li><a href="#">3</a></li>
+								    <li><a href="#">4</a></li>
+								    <li><a href="#">5</a></li>
+								<li>
+							      <a href="#" aria-label="Next">
+							        <span aria-hidden="true">&raquo;</span>
+							      </a>
+							    </li>
+					</ul>
+			</div>
+		</body>
+</html>
 
