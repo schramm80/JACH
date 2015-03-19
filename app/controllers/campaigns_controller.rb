@@ -19,6 +19,7 @@ class CampaignsController < ApplicationController
 
   def show
     @campaign = Campaign.find(params[:id])
+    puts @campaign
     @bookings = @campaign.bookings
     respond_to do |format|
       format.html 
