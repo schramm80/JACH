@@ -10,8 +10,8 @@
 					</button>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">List All</a></li>
-					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Active</a></li>
-					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Finished</a></li>
+					    <li role="presentation"><%= link_to "Active" , campaign_status_path("active"), role: "menuitem", tabindex: "-1" %></li>
+					    <li role="presentation"><%= link_to "Finished" , campaign_status_path("finish"), role: "menuitem", tabindex: "-1" %></li>
 					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Draft</a></li>
 					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Archive</a></li>
 					 </ul>
