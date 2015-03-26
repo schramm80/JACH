@@ -1,46 +1,29 @@
-		<header><img src="/assets/brandnew_logo.png"/></header>
-		<div class="container">
-			<div class="content">
-				<h1>All Campaigns</h1>
-				<div class="dropdown">
-					 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-					Filter
-					<span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-					    <li role="presentation"><%= link_to "All Campaigns" , campaigns_path, role: "menuitem", tabindex: "-1" %></li>
-					    <li role="presentation"><%= link_to "Active" , campaign_status_path("active"), role: "menuitem", tabindex: "-1" %></li>
-					    <li role="presentation"><%= link_to "Finished" , campaign_status_path("finished"), role: "menuitem", tabindex: "-1" %></li>
-					    <li role="presentation"><%= link_to "Draft" , campaign_status_path("draft"), role: "menuitem", tabindex: "-1" %></li>
-					    <li role="presentation"><%= link_to "Archived" , campaign_status_path("archived"), role: "menuitem", tabindex: "-1" %></li>
-					 </ul>
-				</div>
+<div class="container">
+	<div class="content">
+		<h1><%= @campaign_status %> Campaigns</h1>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+				Filter
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation"><%= link_to "All Campaigns" , campaigns_path, role: "menuitem", tabindex: "-1" %></li>
+				<li role="presentation"><%= link_to "Active" , campaign_status_path("active"), role: "menuitem", tabindex: "-1" %></li>
+				<li role="presentation"><%= link_to "Finished" , campaign_status_path("finished"), role: "menuitem", tabindex: "-1" %></li>
+				<li role="presentation"><%= link_to "Draft" , campaign_status_path("draft"), role: "menuitem", tabindex: "-1" %></li>
+				<li role="presentation"><%= link_to "Archived" , campaign_status_path("archived"), role: "menuitem", tabindex: "-1" %></li>
+			</ul>
+		</div>
 
 
 
-					<% @campaigns.each do |c|  %>
+		<% @campaigns.each do |c|  %>
+		<ul class="campaigns">
+			<li class="list-group-item"><%= link_to c.name, campaign_path(c.id) %> <br /></li>
+		</ul>
 
-					<ul class="campaigns">
-						<li class="list-group-item"><%= link_to c.name, campaign_path(c.id) %> <br /></li>
-					</ul>
+		<% end %>
 
-					<% end %>
-				</div>
-					<ul class="pagination">
-							    <li>
-							      <a href="#" aria-label="Previous">
-								        <span aria-hidden="true">&laquo;</span>
-								  </a>
-								</li>
-								    <li><a href="#">1</a></li>
-								    <li><a href="#">2</a></li>
-								    <li><a href="#">3</a></li>
-								    <li><a href="#">4</a></li>
-								    <li><a href="#">5</a></li>
-								<li>
-							      <a href="#" aria-label="Next">
-							        <span aria-hidden="true">&raquo;</span>
-							      </a>
-							    </li>
-					</ul>
-			</div>
+    <%= will_paginate @campaigns %>
+
+</div>
