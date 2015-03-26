@@ -3,18 +3,24 @@ class CampaignsController < ApplicationController
 
   def index
    # @campaigns  #ask lukas
-   puts "in status"
-    if params[:type] 
-      @campaigns = Campaign.where(status: params[:type])
+   # puts "in status"
+
+    if params[:type]
+      @campaign_status = params[:type]
+      @campaigns = Campaign.where(status: params[:type]).paginate(page: params[:page], per_page: 5)
     else
-      @campaigns = Campaign.all
+      @campaigns = Campaign.all.paginate(page: params[:page], per_page: 5)
     end
-    
+
     respond_to do |format|
-      format.html 
+      format.html
       format.json
     end
-    
+
+
+
+
+
   end
 
 
@@ -23,10 +29,10 @@ class CampaignsController < ApplicationController
     puts @campaign
     @bookings = @campaign.bookings
     respond_to do |format|
-      format.html 
+      format.html
       format.json
     end
-  
+
  end
 
 
@@ -46,7 +52,7 @@ class CampaignsController < ApplicationController
 
   def edit
     @campaign = Campaign.find(params[:id])
-   
+
   end
 
 end

@@ -11,7 +11,7 @@ header {
 	padding: 20px 0 20px 100px;
 	height: 100px;
 	background-color: #2C4267;
-	border-bottom: 5px solid black;
+	border-bottom: 2px #2C4267;
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
 li {
 	list-style: none;
 	width: 50%;
-  	font: 200 16px/1.5 Helvetica, Verdana, sans-serif;
+  	font: 200 16px Helvetica, Verdana, sans-serif;
   	border-bottom: 1px solid #ccc;
 }
 
