@@ -8,22 +8,22 @@
 					<span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-					    <li role="presentation"><%= link_to "All Campaigns" , campaigns_path("campaigns"), role: "menuitem", tabindex: "-1" %></li>
+					    <li role="presentation"><%= link_to "All Campaigns" , campaigns_path, role: "menuitem", tabindex: "-1" %></li>
 					    <li role="presentation"><%= link_to "Active" , campaign_status_path("active"), role: "menuitem", tabindex: "-1" %></li>
-					    <li role="presentation"><%= link_to "Finished" , campaign_status_path("finish"), role: "menuitem", tabindex: "-1" %></li>
+					    <li role="presentation"><%= link_to "Finished" , campaign_status_path("finished"), role: "menuitem", tabindex: "-1" %></li>
 					    <li role="presentation"><%= link_to "Draft" , campaign_status_path("draft"), role: "menuitem", tabindex: "-1" %></li>
 					    <li role="presentation"><%= link_to "Archived" , campaign_status_path("archived"), role: "menuitem", tabindex: "-1" %></li>
 					 </ul>
 				</div>
 
-		
+
 
 					<% @campaigns.each do |c|  %>
-						
+
 					<ul class="campaigns">
 						<li class="list-group-item"><%= link_to c.name, campaign_path(c.id) %> <br /></li>
 					</ul>
-						
+
 					<% end %>
 				</div>
 					<ul class="pagination">
