@@ -1,12 +1,13 @@
-<header><img src="/assets/brandnew_logo.png"/></header>
+<div class="contentdiv">
+
 <div class="singlecampaign">
 
-<span class="campaignbutton">Name:</span><%= @campaign.name %><br>
-<span class="campaignbutton">Status:</span><%= @campaign.status %><br>
-<span class="campaignbutton">Budget:</span><%= @campaign.budget %><br>
-<span class="campaignbutton">Brand:</span><%= @campaign.brand %><br>
-<span class="campaignbutton">Campaign Type:</span><%= @campaign.campaign_type %><br>
-<span class="campaignbutton">Created date:</span><%= @campaign.created_at %><br>
+<li class="campaignbutton">Name:</li><span class="campaign_info"><%= @campaign.name %></span><p>
+<li class="campaignbutton">Status:</li><span class="campaign_info"><%= @campaign.status %></span><p>
+<li class="campaignbutton">Budget:</li><span class="campaign_info"><%= @campaign.budget %></span><br><p>
+<li class="campaignbutton">Brand:</li><span class="campaign_info"><%= @campaign.brand %></span><br><p>
+<li class="campaignbutton">Campaign Type:</li><span class="campaign_info"><%= @campaign.campaign_type %></span><br><p>
+<li class="campaignbutton">Created date:</li><span class="campaign_info"><%= @campaign.created_at %></span><br><p>
 
 
 <div id="main-container" class="container">
@@ -25,7 +26,7 @@
 		<span class="campaignbutton">Description:</span><%= @campaign.description %><br>
 		
 	</div>
-    
+    <!--
     <div class="bookings">
     <span class="campaignbutton bookingbutton">Bookings</span>
     
@@ -38,7 +39,9 @@
 					</ul>
 						
 					<% end %>
+     
+    </div> -->
     
-    </div>
-    
+</div>
+
 </div>
