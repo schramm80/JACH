@@ -1,19 +1,10 @@
 class LandingController < ApplicationController
 
-def home
+  def home
 
-respond_to do |format|
-      format.html
-    #  format.json
+   respond_to do |format|
+       format.html
     end
 
-end
-
-def index
-end
-
-
-def show 
-
-end
+  end
 end
