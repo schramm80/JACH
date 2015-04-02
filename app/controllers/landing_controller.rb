@@ -1,8 +1,12 @@
-class LandingController < ActionController::API
-
+class LandingController < ApplicationController
 
 def home
-render "home"
+
+respond_to do |format|
+      format.html
+    #  format.json
+    end
+
 end
 
 def index
