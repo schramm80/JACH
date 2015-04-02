@@ -1,15 +1,10 @@
-class LandingController < ActionController::API
+class LandingController < ApplicationController
 
+  def home
 
-def home
-render "home"
-end
+   respond_to do |format|
+       format.html
+    end
 
-def index
-end
-
-
-def show 
-
-end
+  end
 end
