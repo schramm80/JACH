@@ -48,10 +48,6 @@ table {
 	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
 
-/*body {
-	background-image: url('/assets/backgroundimg.jpg');
-}*/
-
 header {
 	padding: 20px 0 20px 100px;
 	height: 100px;
@@ -98,10 +94,7 @@ li .dropdown-menu {
 	color: white;
 	width: 800px;
 	height: 600px;
-	
-
 }
-
 
 li.campaignbutton {
 
@@ -120,25 +113,14 @@ li.campaignbutton {
    min-width: 15px;
    width:auto;
    padding: 0px 5px 0px 10px;
-   margin-bottom:5px;
-  
-
-   
-
-    
-    }
-
-
-
-
+   margin-bottom:5px;    
+ }
 
 .bookings {
   left: 450px;
   position: relative;
   top: 313px;
   }
-
-
 
 .description {
 	width: 344px;
@@ -148,12 +130,7 @@ li.campaignbutton {
 	left: 450px;
 	background-color: rgba(255, 255, 255, .5);
 	text-align:center;
-
 }
-
-
-
-
 
 .contentdiv  {
   width:100%;
@@ -161,6 +138,19 @@ li.campaignbutton {
   	background-image: url('bgbig.jpg') ;
 	background-repeat: no-repeat;
 	position:absolute;
-  
-
 }
+
+/* landing page */
+
+section {
+	float: left;
+	width: 42%;
+	text-align: center;
+	padding: 40px 4%;
+}
+
+section h2 {
+	font-size: 25px;
+	font-weight: bold;
+}
+

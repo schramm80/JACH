@@ -1,18 +1,20 @@
 	<div class="container">
-			<div class="content">			
-				<h2>View campaigns</h2>
+			<div class="content">
+				<section>		
+					<h2>View campaigns</h2>
 
-					<ul class="Campaigns">
-						<li class="list-group-item"><%= link_to "Campaigns" , campaigns_path %></li>
-					</ul>
+						<ul class="Campaigns">
+							<li class="list-group-item"><%= link_to "Campaigns" , campaigns_path %></li>
+						</ul>
+				</section>
+				<section>
+					<h2>JSON format</h2>
 
-				<h2>JSON format</h2>
+						<ul class="Campaigns">
 
-					<ul class="Campaigns">
-
-						<li class="list-group-item"><%= link_to "Campaigns" , campaigns_path + ".json" %></li>
-					</ul>
-
+							<li class="list-group-item"><%= link_to "Campaigns" , campaigns_path + ".json" %></li>
+						</ul>
+				</section>
 			</div>
 
 		</div>
