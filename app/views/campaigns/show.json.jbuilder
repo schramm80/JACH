@@ -7,7 +7,7 @@
   json.ends_at @campaign_ends
   json.brand @campaign.brand
   json.description @campaign.description
-  json.created_at @campaign.created_at 
+  json.created_at @campaign.created_at
   json.updated_at @campaign.updated_at
 
 json.bookings @bookings do |b|
@@ -19,6 +19,5 @@ json.bookings @bookings do |b|
   json.price b.id
   json.created_at b.created_at
   json.updated_at b.updated_at
-  
-end
 
+end
