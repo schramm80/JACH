@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html>
-<header><img src="/assets/brandnew_logo.png"/></header>
-
+	<link rel="stylesheet" media="all" href="/assets/stylesheet-8be34a9b3c1fc1e3463ac0f5ae3c92f9.css?body=1" />
 	<body>
-
-
 		<div class="container">
+			<div class="content">
+				<header><img src="/assets/brandnew_logo.png"/></header>
 
-			<h1>Choose what you want to do</h1>
+				<h2>View campaigns</h2>
 
-			<%= link_to "Campaigns" , campaigns_path %> |
-			<%= link_to "Campaigns active" , campaign_status_path("active") %> |
-			<%= link_to "Campaigns archived" , campaign_status_path("archived") %> |
-			<%= link_to "Campaigns draft" , campaign_status_path("draft") %> |
-			<%= link_to "Campaigns finished" , campaign_status_path("finished") %> |
-      
+					<ul class="Campaigns">
+						<li class="list-group-item"><%= link_to "Campaigns" , campaigns_path %></li>
+						<li class="list-group-item"><%= link_to "Bookings" , bookings_path %></li>
+					</ul>
 
-			<p><h2>JSON format</h2></p>
+				<h2>JSON format</h2>
 
+					<ul class="Campaigns">
+						<li class="list-group-item"><%= link_to "Campaigns" , campaigns_path %></li>
+						<li class="list-group-item"><%= link_to "Bookings" , bookings_path %></li>
+					</ul>
 
-			<%= link_to "Campaigns" , campaigns_path %> |
-			<%= link_to "Campaigns active" , campaign_status_path("active.json") %> |
-			<%= link_to "Campaigns archived" , campaign_status_path("archived.json") %> |
-			<%= link_to "Campaigns draft" , campaign_status_path("draft.json") %> |
-			<%= link_to "Campaigns finished" , campaign_status_path("finished.json") %> |
-
-			<br>
-			<%= link_to "Bookings" , bookings_path %>
-
-
+			</div>
 
 		</div>
 	</body>
