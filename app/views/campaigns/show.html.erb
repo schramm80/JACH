@@ -1,47 +1,50 @@
 <div class="contentdiv">
 
-<div class="singlecampaign">
+  <div class="singlecampaign">
 
-<li class="campaignbutton">Name:</li><span class="campaign_info"><%= @campaign.name %></span><p>
-<li class="campaignbutton">Status:</li><span class="campaign_info"><%= @campaign.status %></span><p>
-<li class="campaignbutton">Budget:</li><span class="campaign_info"><%= @campaign.budget %></span><br><p>
-<li class="campaignbutton">Brand:</li><span class="campaign_info"><%= @campaign.brand %></span><br><p>
-<li class="campaignbutton">Campaign Type:</li><span class="campaign_info"><%= @campaign.campaign_type %></span><br><p>
-<li class="campaignbutton">Created date:</li><span class="campaign_info"><%= @campaign.created_at %></span><br><p>
+    <li class="campaignbutton">Name:</li><span class="campaign_info"><%= @campaign.name %></span><p>
+      <li class="campaignbutton">Status:</li><span class="campaign_info"><%= @campaign.status %></span><p>
+        <li class="campaignbutton">Budget:</li><span class="campaign_info"><%= @campaign.budget %></span><br><p>
+          <li class="campaignbutton">Brand:</li><span class="campaign_info"><%= @campaign.brand %></span><br><p>
+            <li class="campaignbutton">Campaign Type:</li><span class="campaign_info"><%= @campaign.campaign_type %></span><br><p>
+              <li class="campaignbutton">Created date:</li><span class="campaign_info"><%= @campaign.created_at %></span><br><p>
 
 
-<div id="main-container" class="container">
-      <div class="row">
-        <div id="sidebar" class="col-xs-3">
-          <!-- sidebar content -->
-        </div>
-        <div id="content" class="col-xs-9">
-          <!--  main content -->
-        </div>
-      </div>
-    </div>
-    
-    
-    <div class="description">
-		<span class="campaignbutton">Description:</span><%= @campaign.description %><br>
-		
-	</div>
-    <!--
-    <div class="bookings">
-    <span class="campaignbutton bookingbutton">Bookings</span>
-    
-    
-					<% @bookings.each do |b|  %>
-						
-					<ul class="campaigns">
-						
-						<li class="">Social media profile:<%=	b.social_media_profile_id %> <br /></li>
-					</ul>
-						
-					<% end %>
-     
-    </div> -->
-    
-</div>
+                <div id="main-container" class="container">
+                  <div class="row">
+                    <div id="sidebar" class="col-xs-3">
+                      <!-- sidebar content -->
+                    </div>
+                    <div id="content" class="col-xs-9">
+                      <!--  main content -->
+                    </div>
+                  </div>
 
-</div>
+                  <div class="bookings">
+                    <span class="campaignbutton bookingbutton">Bookings</span>
+
+
+                    <% @bookings.each do |b|  %>
+
+                    <ul class="campaigns">
+
+                      <li class="campaignbutton">Social media profile name:<%=	b.social_media_profile.profile_name %> <br /></li>
+                      <li class="campaignbutton">Booking status:<%=	b.status %> <br /></li>
+                      <li class="campaignbutton">Booking price:<%=	b.price %> <br /></li>
+                    </ul>
+
+                    <% end %>
+
+                  </div>
+
+
+                  <div class="description">
+                    <span class="campaignbutton">Description:</span><%= @campaign.description %><br>
+
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
