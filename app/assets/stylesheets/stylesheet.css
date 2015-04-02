@@ -88,12 +88,17 @@ li .dropdown-menu {
 	padding-left: 40px;
 }
 
-.singlecampaign {
+/* show card */
 
-	background-repeat: no-repeat;
+.singlecampaign {
 	color: white;
-	width: 800px;
-	height: 600px;
+	/*width: 800px;
+	height: 600px;*/
+}
+
+.singlecampaign ul {
+	padding-top: 20px;
+	padding-left: 20px;
 }
 
 li.campaignbutton {
@@ -107,13 +112,14 @@ li.campaignbutton {
    font-family: Lato, Helvetica, Arial, sans-serif;
    border-radius:4px;
    transition: color 0.3s ease-out;
-   text-align:center;   
-   float:left; 
+   /*text-align:center;   */
+   /*float:left; */
    display: inline-block;
-   min-width: 15px;
-   width:auto;
-   padding: 0px 5px 0px 10px;
-   margin-bottom:5px;    
+   /*min-width: 15px;*/
+/*   width:auto;*/
+   padding: 5px 5px 5px 10px;
+   margin-bottom:5px;  
+   margin-top: 10px;  
  }
 
 .bookings {
@@ -123,13 +129,12 @@ li.campaignbutton {
   }
 
 .description {
-	width: 344px;
+	width: 550px;
 	height: 490px;
-	position: relative;
-	top: 120px;
-	left: 450px;
 	background-color: rgba(255, 255, 255, .5);
 	text-align:center;
+	float: left;
+	margin-right: 30px;
 }
 
 .contentdiv  {
@@ -152,5 +157,9 @@ section {
 section h2 {
 	font-size: 25px;
 	font-weight: bold;
+}
+
+.list-group-item {
+	margin-left: 100px;
 }
 
