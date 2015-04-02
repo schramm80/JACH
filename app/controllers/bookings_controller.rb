@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @sosial_madia_profile = SocialMediaProfile.find(params[:id])
     @booking = Booking.find(params[:id])
     puts @booking
 
