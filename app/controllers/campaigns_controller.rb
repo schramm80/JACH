@@ -9,7 +9,7 @@ class CampaignsController < ApplicationController
       @campaign_status = params[:type]
       @campaigns = Campaign.where(status: params[:type]).paginate(page: params[:page], per_page: 5)
     else
-      @campaigns = Campaign.all.paginate(page: params[:page], per_page: 5)
+      @campaigns = Campaign.all.paginate(page: params[:page], per_page: 10)
     end
 
     respond_to do |format|

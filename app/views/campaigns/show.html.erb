@@ -1,5 +1,13 @@
 <div class="contentdiv">
-
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav navbar-nav navbar-center">
+          <%= link_to "Go Back", campaigns_path, class: "btn btn-primary btn-xs navbar-btn" %>
+        </ul>
+      </div>
+    </div>
+  </div>
   <div class="singlecampaign">
     <ul>
       <li class="campaignbutton">Name: <%= @campaign.name %></li>
@@ -9,34 +17,34 @@
       <li class="campaignbutton">Campaign Type: <%= @campaign.campaign_type %></li>
       <li class="campaignbutton">Created date: <%= @campaign.created_at %></li>
     </ul>
-<!--
+    <!--
     <div id="main-container" class="container">
-       <div class="row">
-        <div id="sidebar" class="col-xs-3"> -->
-        <!-- sidebar content -->
-       <!--  </div>
-        <div id="content" class="col-xs-9"> -->
-        <!--  main content -->
-       <!--  </div>
-        </div> -->
-        <div class="description">
-        <span class="campaignbutton">Description: <%= @campaign.description %>
-        </div>
-        <div class="booking_description">
-        <span class="campaignbutton bookingbutton">Bookings</span>
+    <div class="row">
+    <div id="sidebar" class="col-xs-3"> -->
+    <!-- sidebar content -->
+    <!--  </div>
+    <div id="content" class="col-xs-9"> -->
+    <!--  main content -->
+    <!--  </div>
+  </div> -->
+  <div class="description">
+    <span class="campaignbutton">Description: <%= @campaign.description %>
+    </div>
+    <div class="booking_description">
+      <span class="campaignbutton bookingbutton">Bookings</span>
 
-                    <% @bookings.each do |b|  %>
+      <% @bookings.each do |b|  %>
 
-                    <ul class="campaigns">
+      <ul class="campaigns">
 
-                      <li class="campaignbutton">Social media profile name:<%=	b.social_media_profile.profile_name %> <br /></li>
-                      <li class="campaignbutton">Booking status:<%=	b.status %> <br /></li>
-                      <li class="campaignbutton">Booking price:<%=	b.price %> <br /></li>
-                    </ul>
+        <li class="campaignbutton">Social media profile name:<%=	b.social_media_profile.profile_name %> <br /></li>
+        <li class="campaignbutton">Booking status:<%=	b.status %> <br /></li>
+        <li class="campaignbutton">Booking price:<%=	b.price %> <br /></li>
+      </ul>
 
-                    <% end %>
+      <% end %>
 
-                  </div>
-                </div>
-              </div>
-            </div>
+    </div>
+  </div>
+</div>
+</div>
