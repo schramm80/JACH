@@ -2,8 +2,6 @@ class CampaignsController < ApplicationController
 
 
   def index
-   # @campaigns  #ask lukas
-   # puts "in status"
 
     if params[:type]
       @campaign_status = params[:type]
