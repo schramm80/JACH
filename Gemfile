@@ -14,6 +14,7 @@ gem 'jbuilder'
 gem 'state_machine'
 gem "twitter-bootstrap-rails"
 gem 'will_paginate', '~> 3.0'
+gem 'active_model_serializers'
 
 
 # Use SCSS for stylesheets

@@ -14,7 +14,7 @@ class CampaignsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json
+      format.json { render json: @campaigns, root: false }
     end
 
 
@@ -30,7 +30,7 @@ class CampaignsController < ApplicationController
     @bookings = @campaign.bookings
     respond_to do |format|
       format.html
-      format.json
+      format.json { render json: @campaign, root: false }
     end
 
  end
